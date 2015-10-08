@@ -22,4 +22,6 @@ Route::get('/', function () {
 
     EntityManager::persist($scientist);
     EntityManager::flush();
+
+    echo "Branch2";
 });
