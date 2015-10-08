@@ -11,6 +11,15 @@
 |
 */
 
+use App\Example\Scientist;
+
+
 Route::get('/', function () {
-    return view('welcome');
+    $scientist = new Scientist(
+        'Albert',
+        'Einstein'
+    );
+
+    EntityManager::persist($scientist);
+    EntityManager::flush();
 });
